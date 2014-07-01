@@ -38,7 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mechanize', '~> 2.7.3'
-gem 'rails_12factor', group: :production
+group :production
+gem 'rails_12factor'
+gem 'pg'
+end
 ruby "2.0.0"
-
