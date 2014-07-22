@@ -1,0 +1,1 @@
+MongoMapper.database = "firemap-#{Rails.env}"
