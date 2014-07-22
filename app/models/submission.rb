@@ -1,7 +1,7 @@
 class Submission
-	include MongoMapper::Document
-	field :lat, type: float
-	field :long, type: float
+	include Mongoid::Document
+	field :lat, type: Float
+	field :long, type: Float
 	field :image
   has_one :category
 end

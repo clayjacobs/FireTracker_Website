@@ -1,5 +1,5 @@
 class Category
-  include MongoMapper::Document
+  include Mongoid::Document
   def change
     create_table :categories do |t|
       t.column :name, :string
