@@ -1,5 +1,5 @@
-class calfire < ActiveRecord::Base
-	include MongoMapper::Document
-  field :lat, type:float
-  field :long, type:float
+class Calfire
+	include Mongoid::Document
+  field :lat, type: Float
+  field :long, type: Float
 end
