@@ -1,0 +1,17 @@
+<head>
+  <title> <%= "#{yield :title}" || "Fire Tracker" %> </title>
+
+  <!-- For Responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- FontAwesome -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <!-- CSRF Tags-->
+  <%= csrf_meta_tags %>
+  
+  <link rel="shortcut icon" type="image/png" href="http://www.patrick-wied.at/img/favicon.png" />
+</head>
