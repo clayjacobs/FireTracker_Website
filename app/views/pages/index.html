@@ -1,3 +1,14 @@
+<style>
+    #heatmapArea {
+      position:relative;
+      float:left;
+      width:100%;
+      height:600px;
+      border:1px dashed black;
+    }
+</style>
+
+
 <div class = "mapArea">
 			<div id="heatmapArea">
 		<div id="tog" class="btnTog">Toggle HeatmapOverlay</div>		
@@ -27,9 +38,6 @@
 
 	        </aside>
 			
-<script src="http://openlayers.org/api/OpenLayers.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/heatmap.js"></script>
-<script type="text/javascript" src="../../assets/javascripts/heatmap-openlayers.js"></script>
 <script type="text/javascript">
 var map, layer, heatmap, calfire;
 
@@ -57,19 +65,19 @@ function init(){
         });
     }
 
-    transformedTestData.data = nudata;
+  transformedTestData.data = nudata;
 
-   map = new OpenLayers.Map( 'heatmapArea');
-    layer = new OpenLayers.Layer.OSM();
+  map = new OpenLayers.Map( 'heatmapArea');
+  layer = new OpenLayers.Layer.OSM();
 
-   // create our heatmap layer
-   heatmap = new OpenLayers.Layer.Heatmap( "Heatmap Layer", map, layer, {visible: true, radius:10}, {isBaseLayer: false, opacity: 0.3, projection: new OpenLayers.Projection("EPSG:4326")});
-   map.addLayers([layer, heatmap]);
+  // create our heatmap layer
+  heatmap = new OpenLayers.Layer.Heatmap( "Heatmap Layer", map, layer, {visible: true, radius:10}, {isBaseLayer: false, opacity: 0.3, projection: new OpenLayers.Projection("EPSG:4326")});
+  map.addLayers([layer, heatmap]);
    
-   calfire = new OpenLayers.Layer.Vector("KML", {
+  calfire = new OpenLayers.Layer.Vector("KML", {
                strategies: [new OpenLayers.Strategy.Fixed()],
                protocol: new OpenLayers.Protocol.HTTP({
-                   url: "kml/calfire.kml",
+                   url: "/kml/calfire.kml",
                    format: new OpenLayers.Format.KML({
                        extractStyles: true, 
                        extractAttributes: true,
