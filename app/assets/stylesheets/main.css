@@ -64,7 +64,7 @@ img {
 #header {
 	z-index: 200;
 	background: #fff;
-	min-height: 80px;
+	height: 10%;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -78,7 +78,7 @@ img {
   min-height: 80px;
   padding: 0 0 0 10px;
   position: relative;
-  background: #ff0000 url('../../assets/img/logo.png/') no-repeat 25px 26px;
+  background: #ff0000 url('logo.png') no-repeat 25px 26px;
 }
 #header .logo {
 	color: #fff;
