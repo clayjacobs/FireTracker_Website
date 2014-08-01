@@ -64,7 +64,7 @@ img {
 #header {
 	z-index: 200;
 	background: #fff;
-	height: 10%;
+	height: 80px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
