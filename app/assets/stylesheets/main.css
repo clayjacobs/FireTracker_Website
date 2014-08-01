@@ -330,7 +330,7 @@ img {
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	z-index: 100;
+	z-index: 1499;
 	margin-left: 5%;
 	margin-top: 3%;
 	opacity: 0.7;

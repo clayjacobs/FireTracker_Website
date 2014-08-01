@@ -26,12 +26,11 @@
 	-o-border-radius:15px;
 	-webkit-border-radius:15px;
 	border-radius:15px;
-	margin-top:3%;
-	margin-left:80%;
+	margin-right:0%;
+	margin-left:0%; 
 	border:2px solid black;
 	cursor:pointer;
-	color:white;
-	background-color:black;
+	color:grey;
 	z-index:1999;
 }
 #gen:hover{
