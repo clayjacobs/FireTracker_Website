@@ -1,5 +1,9 @@
 var map, layer, heatmap, calfire;
 
+var heatmapOn = true;
+var calfireOn = "true";
+var userOn = "true";
+
 
 function init() {
 
@@ -50,10 +54,29 @@ function init() {
     heatmap.setDataSet(transformedTestData);
 }
 
+function togHeatmap(){
+	heatmap.toggle();
+	if(heatmapOn){
+		heatmapOn = false;
+		console.log("Should be switching to glyphicon glyphicon-ok");
+		document.getElementById("hmTog").class = "glyphicon glyphicon-ok";
+	}
+	else{
+		heatmapOn = true;
+		console.log("Should be switching to fa-cogs");
+		document.getElementById("hmTog").class = "fa fa-cogs";
+	}
+}
+
+function isheatmapOn(){
+	return heatmapOn;
+}
+
 window.onload = function(){
     init();
 };
-
-document.getElementById("tog").onclick = function(){
+/*
+document.getElementById("tog1").onclick = function(){
     heatmap.toggle();
 };
+*/
