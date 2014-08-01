@@ -49,8 +49,14 @@ function init() {
             });
 
     map.addLayer(calfire);
-    map.zoomToMaxExtent();
-    map.zoomIn();
+    var lat = 39.3138895;
+    var lon = -98.2233523;
+    var zoom = 4;
+ 
+    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+    var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+    map.setCenter(position, zoom );
     heatmap.setDataSet(transformedTestData);
 }
 
@@ -58,13 +64,9 @@ function togHeatmap(){
 	heatmap.toggle();
 	if(heatmapOn){
 		heatmapOn = false;
-		console.log("Should be switching to glyphicon glyphicon-ok");
-		document.getElementById("hmTog").class = "glyphicon glyphicon-ok";
 	}
 	else{
 		heatmapOn = true;
-		console.log("Should be switching to fa-cogs");
-		document.getElementById("hmTog").class = "fa fa-cogs";
 	}
 }
 
