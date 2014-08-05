@@ -70,6 +70,10 @@ function togHeatmap(){
 	}
 }
 
+function togCalfire(){
+	calfire.toggle();
+}
+
 function isheatmapOn(){
 	return heatmapOn;
 }
