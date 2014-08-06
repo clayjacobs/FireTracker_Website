@@ -4,4 +4,9 @@ class Submission
 	field :long, type: Float
 	field :image
   has_one :category
+
+
+  def initialize(lat, long, category, image=nil)
+  end
+
 end
