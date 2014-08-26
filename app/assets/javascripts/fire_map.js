@@ -1,8 +1,7 @@
-var map, layer, heatmap, calfire;
+var map, layer, heatmap, calfire, userdata;
 
-var heatmapOn = true;
-var calfireOn = "true";
-var userOn = "true";
+var calfireOn = true;
+var userDataOn = true;
 
 
 function init() {
@@ -36,10 +35,10 @@ function init() {
     heatmap = new OpenLayers.Layer.Heatmap( "Heatmap Layer", map, layer, {visible: true, radius:10}, {isBaseLayer: false, opacity: 0.3, projection: new OpenLayers.Projection("EPSG:4326")});
     map.addLayers([layer, heatmap]);
 
-    calfire = new OpenLayers.Layer.Vector("KML", {
+        calfire = new OpenLayers.Layer.Vector("KML", {
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
-                    url: "/kml/calfire.kml",
+                    url: "/kml/CaliforniaFireMap.kml",
                     format: new OpenLayers.Format.KML({
                         extractStyles: true,
                         extractAttributes: true,
@@ -49,6 +48,21 @@ function init() {
             });
 
     map.addLayer(calfire);
+
+    userdata = new OpenLayers.Layer.Vector("KML", {
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "/kml/TestUserData.kml",
+                    format: new OpenLayers.Format.KML({
+                        extractStyles: true,
+                        extractAttributes: true,
+                        maxDepth: 2
+                    })
+                })
+            });
+
+    map.addLayer(userdata);
+
     var lat = 39.3138895;
     var lon = -98.2233523;
     var zoom = 4;
@@ -62,16 +76,26 @@ function init() {
 
 function togHeatmap(){
 	heatmap.toggle();
-	if(heatmapOn){
-		heatmapOn = false;
-	}
-	else{
-		heatmapOn = true;
-	}
 }
 
-function isheatmapOn(){
-	return heatmapOn;
+function togCalfire(){
+	if (calfireOn) {
+		calfire.setVisibility(false);
+		calfireOn = false;
+		return;
+	}
+	calfire.setVisibility(true);
+	calfireOn = true;
+}
+
+function togUserData(){
+	if (userDataOn) {
+		userdata.setVisibility(false);
+		userDataOn = false;
+		return;
+	}
+	userdata.setVisibility(true);
+	userDataOn = true;
 }
 
 window.onload = function(){

@@ -64,6 +64,7 @@ GEM
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     multi_json (1.10.1)
+    nokogiri (1.5.6)
     optionable (0.2.0)
     origin (2.1.1)
     polyglot (0.3.5)
@@ -129,10 +130,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (~> 4.0.0)
+  moped
+  nokogiri
   rails (= 4.1.1)
   rails_12factor
   sass-rails (~> 4.0.3)

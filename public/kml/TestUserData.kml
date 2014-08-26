@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Test User Data</name>
+  <description><![CDATA[]]></description>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/mzGEn6u.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/rM8BCud.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/mzGEn6u.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/r0kQO1T.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/mzGEn6u.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/rM8BCud.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/r0kQO1T.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/r0kQO1T.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/r0kQO1T.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/rM8BCud.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/r0kQO1T.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/mzGEn6u.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://i.imgur.com/rM8BCud.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Placemark 1</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>-98.206787,32.657875,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 2</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>-97.602539,32.435612,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 3</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>-98.437500,32.620869,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 5</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>-87.539062,41.442726,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 6</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>-72.421875,41.442726,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 7</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>-73.652344,41.112469,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 8</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>-74.091797,40.647305,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 14</name>
+    <description><![CDATA[<div dir="ltr"></div>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>-96.943359,32.342842,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 9</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>-123.310547,47.040180,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 10</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>-117.070312,47.219566,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 11</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>-118.037109,33.797409,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 12</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>-98.327637,32.287132,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Placemark 13</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>-97.690430,32.521343,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>
