@@ -15,8 +15,7 @@ task :scrape => :environment do
       if (array[0] != 0 && array[1] !=0)
         puts array[0]
         puts array[1]
-        s = Submission.new(array[0], array[1], "Calfire", nil)
-        puts s.insert
+        s = Submission.create(:lat => array[0], :long => array[1], :category => 'Calfire', :image => nil)
       end
     end
   end
