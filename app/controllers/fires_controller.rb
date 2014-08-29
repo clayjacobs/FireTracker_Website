@@ -33,6 +33,6 @@ class FiresController < ApplicationController
   private
 
     def submission_params
-      params.require(:lat,:long,:category,:image)
+      params.require(:lat,:long,:category,:image,:time_submitted)
     end
 end
