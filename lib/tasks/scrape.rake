@@ -16,7 +16,7 @@ task :scrape => :environment do
         puts array[0]
         puts array[1]
         puts time
-        s = Submission.create(:lat => array[0], :long => array[1], :category => 'Calfire', :image => nil, :time_submitted => time)
+        s = Submission.create(:lat => array[0], :long => array[1], :category => 'Calfire', :image => nil, :time_submitted => time, :severity => 'N/A')
       end
     end
   end

@@ -5,4 +5,5 @@ class Submission
 	field :image, type: Moped::BSON::Binary
     field :category, type: String
     field :time_submitted, type: Integer
+    field :severity, type: String
 end

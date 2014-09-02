@@ -8,6 +8,7 @@
       <th>Image</th>
       <th>Category</th>
       <th>Time Submitted</th>
+      <th>Severity</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= submission.image %></td>
         <td><%= submission.category %></td>
         <td><%= submission.time_submitted %></td>
+        <td><%= submission.severity %></td>
         <td><%= link_to 'Show', submission %></td>
         <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
         <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
