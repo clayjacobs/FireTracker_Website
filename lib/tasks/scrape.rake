@@ -10,13 +10,10 @@ task :scrape => :environment do
     coords = coords.text.split("\n")
     coords.each do |coord|
       array = coord.strip.split(',')
-      array[0] = array[0].to_f
-      array[1] = array[1].to_f
       if (array[0] != 0 && array[1] !=0)
         puts array[0]
         puts array[1]
-        puts time
-        s = Submission.create(:lat => array[0], :long => array[1], :category => 'Calfire', :image => nil, :time_submitted => time, :severity => 'N/A')
+        s = Submission.create(:lat => array[0].to_f, :long => array[1].to_f, :category => 'Calfire', :image => nil, :time_submitted => time, :severity => 'N/A')
       end
     end
   end
