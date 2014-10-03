@@ -28,3 +28,4 @@ gem 'rails_12factor', group: :production
 #ruby "2.1.0"
 gem "bson"
 gem "moped"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'

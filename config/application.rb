@@ -6,6 +6,7 @@ require "rails/test_unit/railtie"
 require "sprockets/railtie"
 require "bson"
 require "moped"
+require "mongoid/railtie"
 
 Moped::BSON = BSON
 
