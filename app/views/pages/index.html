@@ -1,3 +1,5 @@
+<% content_for :title, "FireTracker" %>
+
 <style>
     #heatmapArea {
       position:relative;
@@ -15,7 +17,7 @@
     <aside class="sidebar">
       <div id="leftside-navigation" class="nano">
         <ul class="nano-content">
-          <li class="sub-menu active"><a href="index.html"><i id="hmTog" class="fa fa-dashboard"></i>myOasis</a></li>
+          <li class="sub-menu active"><a name="trackerTitle" href="index.html"><i id="hmTog" class="fa fa-dashboard"></i>myOasis</a></li>
           <!--
           <li class="sub-menu"><a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>FireTracker</span><i class="arrow fa fa-angle-right pull-right"></i></a></li>
           <li class="sub-menu"><a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>InfectionTracker</span><i class="arrow fa fa-angle-right pull-right"></i></a> </li>
@@ -24,7 +26,7 @@
           <div class="panel-group" id="accordion">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <a name="trackerTitle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onClick="togFire()">
                     FireTracker
                   </a>
                 </h4>
@@ -44,7 +46,7 @@
               </div>
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <a name="trackerTitle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onClick="togInfection()">
                     Outbreak Tracker
                   </a>
                 </h4>
@@ -52,10 +54,10 @@
               <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
                   <li class="sub-menu">
-                    <a><div id="tog4">Layer #1</div></a>
+                    <a><div id="tog4">Ebola Instances</div></a>
                   </li>
                   <li class="sub-menu">
-                    <a><div id="tog5">Layer #2</div></a>
+                    <a><div id="tog5">Marburg Instances</div></a>
                   </li>
                   <li class="sub-menu">
                     <a><div id="tog6">Layer #3</div></a>
@@ -64,7 +66,7 @@
               </div>
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  <a name="trackerTitle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
                     Yeti Tracker
                   </a>
                 </h4>
