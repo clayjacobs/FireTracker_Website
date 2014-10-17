@@ -1,10 +1,76 @@
 var map, layer, heatmap, calfire, userdata;
 
+var EPSG_WGS84 = new OpenLayers.Projection("EPSG:4326");
+var EPSG_900913 = new OpenLayers.Projection("EPSG:900913");
+
 var calfireOn = true;
 var userDataOn = true;
 
+/*
+	Builds the icons with each custom popup while allowing custom icons
+*/
+
+function marker_popup(lon_lat, popup_content, icon_path, icon_size) {
+
+    var label = null;
+    var markers = new OpenLayers.Layer.Markers(label);
+    if (label == null) markers.displayInLayerSwitcher = false;
+    var marker_icon;
+
+    if (icon_path == null) {
+        markers.mymarker = new OpenLayers.Marker(lon_lat); // Use OL default.
+    } else {
+        if (icon_size == null) {
+            marker_icon = new OpenLayers.Icon(icon_path, null, null);
+        } else {
+            var size = new OpenLayers.Size(icon_size, icon_size);
+            var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+            marker_icon = new OpenLayers.Icon(icon_path, size, offset);
+        }
+        markers.mymarker = new OpenLayers.Marker(lon_lat, marker_icon);
+    }
+    var m = markers.mymarker;
+    m.feature = new OpenLayers.Feature(markers, lon_lat);
+    m.feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud);
+    m.feature.data.popupContentHTML = popup_content;
+    m.mypopup = null;
+    m.events.register("mousedown", m, function(evt) {
+        if (m.mypopup == null) {
+            m.mypopup = m.feature.createPopup(true);
+            markers.map.addPopup(m.mypopup);
+        } else {
+            if (m.mypopup.visible() != true) {
+                m.mypopup.toggle();
+            } else {
+                markers.map.removePopup(m.mypopup);
+                m.feature.destroyPopup();
+                m.mypopup = null;
+            }
+        }
+        OpenLayers.Event.stop(evt);
+    });
+    markers.addMarker(m);
+    return markers;
+}
 
 function init() {
+
+	var jsonData = [];
+
+	var json = $.ajax({
+  	dataType: "json",
+  	url: "/submissions.json",
+  	data: data,
+  	success: function(data){
+  		console.log(data);
+  		jsonData = data;
+  		return data;
+  		}
+	});
+
+	console.log(jsonData);
+	console.log(json);
+
 
     var testData={
                         max: 46,
@@ -63,14 +129,17 @@ function init() {
 
     map.addLayer(userdata);
 
+
     var lat = 39.3138895;
     var lon = -98.2233523;
     var zoom = 4;
- 
-    var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-    var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+    var position = new OpenLayers.LonLat(lon, lat).transform( EPSG_WGS84, EPSG_900913);
     map.setCenter(position, zoom );
+
+    var query = new OpenLayers.LonLat(-122.2928337167, 37.5549570333).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+    var popup = new OpenLayers.Popup.FramedCloud("Popup", query, null, "Text", null, true);
+	map.addPopup(popup, false);
+	
     heatmap.setDataSet(transformedTestData);
 }
 
@@ -101,8 +170,3 @@ function togUserData(){
 window.onload = function(){
     init();
 };
-/*
-document.getElementById("tog1").onclick = function(){
-    heatmap.toggle();
-};
-*/

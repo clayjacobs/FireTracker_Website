@@ -1,5 +1,9 @@
 function togInfection(){
 
+    togHeatmap();
+    togCalfire();
+    togUserData();
+    
 	var headerBrand = document.getElementsByClassName('brand');
 	for(var i=0, len=headerBrand.length; i<len; i++)
     {
@@ -33,6 +37,10 @@ function togInfection(){
 }
 
 function togFire(){
+
+    togHeatmap();
+    togCalfire();
+    togUserData();
 
 	var headerBrand = document.getElementsByClassName('brand');
 	for(var i=0, len=headerBrand.length; i<len; i++)
