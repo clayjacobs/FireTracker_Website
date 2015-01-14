@@ -60,7 +60,6 @@ function init() {
 	var json = $.ajax({
   	dataType: "json",
   	url: "/submissions.json",
-  	data: data,
   	success: function(data){
   		console.log(data);
   		jsonData = data;
@@ -68,8 +67,8 @@ function init() {
   		}
 	});
 
-	console.log(jsonData);
 	console.log(json);
+    console.log(json.responseJSON);
 
 
     var testData={
@@ -139,7 +138,14 @@ function init() {
     var query = new OpenLayers.LonLat(-122.2928337167, 37.5549570333).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
     var popup = new OpenLayers.Popup.FramedCloud("Popup", query, null, "Text", null, true);
 	map.addPopup(popup, false);
-	
+
+
+	markers4 = marker_popup(new OpenLayers.LonLat(11.271, 43.819).transform(EPSG_WGS84, EPSG_900913),
+        'Vediamo quest\'altro popup <a href="">link</a>',
+        'fire.png', 32
+    );
+    map.addLayer(markers4);
+
     heatmap.setDataSet(transformedTestData);
 }
 
