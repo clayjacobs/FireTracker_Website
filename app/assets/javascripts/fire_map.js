@@ -117,7 +117,7 @@ function init() {
     userdata = new OpenLayers.Layer.Vector("KML", {
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
-                    url: "/kml/TestUserData.kml",
+                    url: "/kml/States.kml",
                     format: new OpenLayers.Format.KML({
                         extractStyles: true,
                         extractAttributes: true,
@@ -134,17 +134,6 @@ function init() {
     var zoom = 4;
     var position = new OpenLayers.LonLat(lon, lat).transform( EPSG_WGS84, EPSG_900913);
     map.setCenter(position, zoom );
-
-    var query = new OpenLayers.LonLat(-122.2928337167, 37.5549570333).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-    var popup = new OpenLayers.Popup.FramedCloud("Popup", query, null, "Text", null, true);
-	map.addPopup(popup, false);
-
-
-	markers4 = marker_popup(new OpenLayers.LonLat(11.271, 43.819).transform(EPSG_WGS84, EPSG_900913),
-        'Vediamo quest\'altro popup <a href="">link</a>',
-        'fire.png', 32
-    );
-    map.addLayer(markers4);
 
     heatmap.setDataSet(transformedTestData);
 }
